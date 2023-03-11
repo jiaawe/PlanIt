@@ -1,7 +1,10 @@
-<script setup>
-import EmployeeNavBar from './components/EmployeeNavBar.vue'
-</script>
-
 <template>
-  <EmployeeNavBar />
+  <ProfilePage />
 </template>
+
+<script>
+import ProfilePage from "@/views/ProfilePage.vue";
+export default {
+  components: { ProfilePage },
+};
+</script>

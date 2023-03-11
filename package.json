@@ -10,6 +10,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@braid/vue-formulate": "^2.5.3",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },

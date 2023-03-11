@@ -32,7 +32,7 @@ export default {
 }
 
 .logo {
-  height: 6rem;
+  height: 7.5rem;
 }
 
 .main-nav-list {
