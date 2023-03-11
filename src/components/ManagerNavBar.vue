@@ -8,11 +8,18 @@
         <li><a class="main-nav-link" target="#">Home</a></li>
         <li><a class="main-nav-link" target="#">Profile</a></li>
         <li><a class="main-nav-link" target="#">Analytics</a></li>
-        <li><a class="main-nav-link nav-cta" target="#">Log out</a></li>
+        <li><SlotButton>Log Out</SlotButton></li>
       </ul>
     </nav>
   </header>
 </template>
+
+<script>
+import SlotButton from "@/components/SlotButton.vue";
+export default {
+  components: { SlotButton },
+};
+</script>
 
 <style scoped>
 .header {
