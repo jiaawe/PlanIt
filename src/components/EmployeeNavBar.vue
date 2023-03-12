@@ -42,6 +42,10 @@ export default {
   gap: 3.2rem;
 }
 
+.main-nav-link {
+  font-size: 1.8rem;
+}
+
 .main-nav-link:link,
 .main-nav-link:visited {
   display: inline-block;
