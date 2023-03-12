@@ -51,9 +51,13 @@
                     <p class="field-input" > {{ taskDetails.assignedEmployee }} </p>
                   </div>
                 </form>
+                <br>
+                <div class="edit-task">
+                  <SlotButton>Edit Task</SlotButton>
+                </div>
               </div>
             </div>
-          </div>
+          </div>          
         </div>
       </section>
     </main>
@@ -64,6 +68,8 @@ import SlotButton from '@/components/SlotButton.vue'
 
 export default {
     name: "TaskDetailsPage",
+    
+    components: { SlotButton },
     
     data() {
         return {
@@ -88,6 +94,7 @@ export default {
     grid-template-columns: repeat(2, 1fr);
     /* column-gap: 80px; */
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .header-text-box {
@@ -192,6 +199,12 @@ textarea input::placeholder {
 
 #collaborator {
   margin-bottom: 16px;
+}
+
+.edit-task {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 </style>
