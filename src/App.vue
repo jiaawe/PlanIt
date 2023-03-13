@@ -1,47 +1,23 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
   <main>
-    <TheWelcome />
+    <ManagerNavBar />
+    <HomePage />
+    <!-- <ProfilePage /> -->
+    <!-- <CreateProject /> -->
+    <!-- <TaskDetailsPage /> -->
   </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<script>
+import ManagerNavBar from "@/components/ManagerNavBar.vue";
+import EmployeeNavBarVue from '@/components/EmployeeNavBar.vue';
+import ProfilePage from "@/views/ProfilePage.vue";
+import HomePage from "@/views/HomePage.vue";
+import CreateProject from "@/views/CreateProject.vue";
+import TaskDetailsPage from "@/views/TaskDetailsPage.vue";
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+export default {
+  components: { ProfilePage, HomePage, CreateProject, ManagerNavBar, EmployeeNavBarVue, TaskDetailsPage},
+};
+</script>
