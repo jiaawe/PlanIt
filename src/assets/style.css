@@ -1,23 +1,3 @@
-<script>
-import IssuePage from "@/views/IssuePage.vue"
-
-export default{
-  name: 'App',
-  components: {
-    IssuePage
-  }
-}
-</script>
-
-<template>
-<IssuePage/>
-  <!-- <div id ="main-nav-link">
-   <router-link to = "/issue"> IssuePage </router-link>
-  </div>
-  <router-view/> -->
-</template>
-
-<style scoped>
 * {
   padding: 0;
   margin: 0;
@@ -205,4 +185,3 @@ textarea input::placeholder {
   display: block;
   margin: auto;
 }
-</style>

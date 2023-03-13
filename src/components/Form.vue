@@ -1,20 +1,70 @@
 <script>
-import IssuePage from "@/views/IssuePage.vue"
+import firebaseApp from '../firebase.js'
+import { getFirestore } from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore";
+const db = getFirestore(firebaseApp);
 
-export default{
-  name: 'App',
-  components: {
-    IssuePage
-  }
+export default {
+  // methods: {
+  //   async savetofs(){
+  //     console.log("IN AC")
+
+  //     let subject = document.getElementById("issue").value
+  //     let description = document.getElementById("description").value
+
+  //     alert(" Saving your issues : " + subject)
+
+  //     try{
+  //       const docRef = await setDoc(doc(db, "Issues", subject), {
+  //         Subject:subject, 
+  //         Desc:description
+  //         })
+  //       console.log(docRef)
+  //       document.getElementsByClassName("form").reset();
+  //       this.$emit("added")
+  //     }
+  //     catch(error){
+  //       console.error("Error adding issue: ", error);
+  //     }
+  //   }
+  // }
 }
 </script>
 
 <template>
-<IssuePage/>
-  <!-- <div id ="main-nav-link">
-   <router-link to = "/issue"> IssuePage </router-link>
+  <div class="form-page">
+    <div class="userform-text-box">
+      <h2 class="text-box-tagline sub-heading">Submit Your Issue</h2>
+      <hr />
+      <form class="form" action="#">
+        <div>
+          <label>Task Name</label>
+          <p class="task-name">A/B Testing on Sales Ads Campaign</p>
+        </div>
+
+        <div>
+          <label for="issue">Issue Subject</label>
+          <input
+            id="issue"
+            type="text"
+            placeholder="Enter Issue Subject"
+            required
+          />
+        </div>
+        
+        <div>
+          <label for="description">Description</label>
+          <textarea
+            id="description"
+            rows="4"
+            cols="50"
+            placeholder="Describe your issue"
+          ></textarea>
+        </div>
+        <button class="btn center-btn" v-on:click = "savetofs">Submit Issue</button>
+      </form>
+    </div>
   </div>
-  <router-view/> -->
 </template>
 
 <style scoped>

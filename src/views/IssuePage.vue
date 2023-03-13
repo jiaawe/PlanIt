@@ -1,20 +1,27 @@
 <script>
-import IssuePage from "@/views/IssuePage.vue"
+import Form from '@/components/Form.vue'
 
 export default{
-  name: 'App',
-  components: {
-    IssuePage
+  name: 'Issue',
+  components:{
+    Form
   }
 }
 </script>
 
 <template>
-<IssuePage/>
-  <!-- <div id ="main-nav-link">
-   <router-link to = "/issue"> IssuePage </router-link>
-  </div>
-  <router-view/> -->
+
+<div class="issue-form">
+    <div class="header-text-box">
+        <h1 class="tagline">Have an issue on your project?</h1>
+        <p class="header-text">
+        Don't hesitate to raise your issue here. Our team of experts
+        will help in resolving your issues.
+        </p>
+    </div>
+    <Form/>
+</div>
+
 </template>
 
 <style scoped>
