@@ -1,17 +1,34 @@
 {
-  "name": "planit",
+  "name": "plan-it",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
   },
   "dependencies": {
-    "vue": "^3.2.47"
+    "@braid/vue-formulate": "^2.5.3",
+    "apexcharts": "^3.37.2",
+    "firebase": "^9.17.2",
+    "highcharts": "^10.3.3",
+    "highcharts-vue": "^1.4.0",
+    "moment": "^2.29.4",
+    "pinia": "^2.0.33",
+    "vue": "^3.2.47",
+    "vue-google-charts": "^1.1.0",
+    "vue-router": "^4.1.6",
+    "vue3-apexcharts": "^1.4.1"
   },
   "devDependencies": {
+    "@rushstack/eslint-patch": "^1.2.0",
     "@vitejs/plugin-vue": "^4.0.0",
+    "@vue/eslint-config-prettier": "^7.1.0",
+    "eslint": "^8.34.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "prettier": "^2.8.4",
     "vite": "^4.1.4"
   }
 }
