@@ -1,35 +1,63 @@
-@import './base.css';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700;800;900&display=swap");
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+:root {
+  --primary: #a2a9ed;
+  --secondary: #d4d7fa;
+  --warning: #da0f41;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+html {
+  font-size: 62.5%;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  background-color: #fff;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.form label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.form input,
+.form select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  border-radius: 9px;
+  border: 0.1rem solid gray;
+  margin-bottom: 16px;
+}
+
+.form input::placeholder {
+  color: rgb(136, 136, 136);
+}
+
+textarea {
+  width: 100%;
+  padding-left: 8px;
+  padding-top: 8px;
+  font-size: 16px;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+}
+
+textarea input::placeholder {
+  color: rgb(136, 136, 136);
 }
