@@ -1,4 +1,4 @@
-# Project Management System
+# Project Management System - Plan It
 <b>Project Link: </b> <br>
 https://planit-5dfc0.web.app/ <br> <br>
 **Account Details:** <br>
