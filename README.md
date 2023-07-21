@@ -126,12 +126,420 @@ Plan It is meant to support multiple different industries and types of businesse
     <li>As an employee, I want to have a platform to raise any concerns or issues related to my allocated tasks or projects, so that my manager can address them efficiently.</li>
     <li>As an employee, I want to gain higher transparency of task divisions so that I could understand if I were fairly rewarded according to my contribution to the team.</li>
     <li>As an employee, I want to be able to thrive even in remote work arrangements by updating task statuses easily and efficiently through the application, so that my manager can review and approve them in a timely manner.</li>
-</ol>
+</ol> <br>
 
+## Requirements
+### Functional
+<table>
+  <tr>
+   <td><strong>S/N</strong>
+   </td>
+   <td><strong>Requirements Description</strong>
+   </td>
+   <td><strong>Acceptance Criteria</strong>
+   </td>
+   <td><strong>Priority</strong>
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4" >Authentication
+   </td>
+  </tr>
+  <tr>
+   <td>1.1
+   </td>
+   <td>Managers and Employees must be able to register to the system by inputting a valid company email, name, contact number, password, company, department and role. The employee account is created upon successful validation of credentials. There should not be repeated usage of company email. For managers, they will additionally be prompted to enter a company’s secret code as validation.
+   </td>
+   <td>Success message must be shown upon successful registration, else show an error message for the invalid fields.
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>1.2
+   </td>
+   <td>Managers and Employees with existing accounts should be able to log in with their company email and password. 
+   </td>
+   <td>Home Page shown upon successful login, else return an error message stating invalid credentials
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>1.3
+   </td>
+   <td>Managers and Employees can reset their password by pressing the “Forget Password” button. Upon entering a valid company email, instructions to resetting the password will be sent to the email.
+   </td>
+   <td>Success message upon successful password reset, informing the user to check their email for instructions, else return an error message
+   </td>
+   <td>Medium
+   </td>
+  </tr>
+  <tr>
+   <td>1.4
+   </td>
+   <td>Managers and Employees should be able to log out of the system. There will be a logout button on the navigation bar after they are logged in.
+   </td>
+   <td>Upon pressing the logout button, the user is logged out of the system and brought to the landing page
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4" >Home Page
+   </td>
+  </tr>
+  <tr>
+   <td>2.1
+   </td>
+   <td>Managers can view <strong>all</strong> projects created by them and Employees can view projects they are <strong>working on</strong>. Ongoing projects will be displayed on the top, while completed projects are below and grayed out, sorted by their deadlines.
+   </td>
+   <td>All projects and its details (name, manager and deadlines) are listed on this page. Only projects associated with the manager or employee are shown.
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>2.2
+   </td>
+   <td>Managers can search for projects created by them and Employees can search for projects they are working on. The result shows the projects that are filtered out according to the input.
+   </td>
+   <td>Out of all projects associated with them, only those with names that partially or fully contain the input are shown. A message stating no results is shown if no such project title is found.
+   </td>
+   <td>Low
+   </td>
+  </tr>
+  <tr>
+   <td>2.3
+   </td>
+   <td>Managers can create new projects. They will be prompted to input the project’s name, description and deadline, which are all compulsory fields. Project description has to be at least 10 words.
+   </td>
+   <td>Upon creation of a new project, a success message appears and the new project is displayed. Else, an error message is shown.
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>2.4
+   </td>
+   <td>Managers can view<strong> all</strong> current tasks for their projects. Employees can view all current tasks<strong> assigned</strong> to them to be completed. These tasks are sorted by due date, from earliest to latest, and then priority.
+   </td>
+   <td>All current tasks are displayed chronologically according to the due date and priority on the right side of the home page. A scrollable list will display up to three tasks.
+   </td>
+   <td>Medium
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4" >Project Dashboard - Employees
+   </td>
+  </tr>
+  <tr>
+   <td>3.1
+   </td>
+   <td>Employees can view all created tasks in the project. The tasks will be split in 3 different sections in this order: Open, Pending Review, and Closed. The tasks are sorted according to the deadline in each section. Tasks that are Open but overdue will be highlighted.
+   </td>
+   <td>Displays all of the tasks in the project, sorted accordingly in the project dashboard sections. Tasks that are Open but overdue will have their due date highlighted in red.
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>3.2
+   </td>
+   <td>Employees can filter their <strong>assigned </strong>tasks in the project.
+   </td>
+   <td>Displays all tasks in the project <strong>assigned </strong>to the employee, sorted accordingly in the project dashboard sections.
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>3.3
+   </td>
+   <td>Employees should be able to search for the task title. There will be a search bar where the title of the task can be searched. The result shows the tasks that are filtered out according to the input and current filter view (all or assigned tasks).
+   </td>
+   <td>Only those with titles that partially or fully contain the user input are shown. The sections will be blank if no such task title is found.
+   </td>
+   <td>Medium
+   </td>
+  </tr>
+  <tr>
+   <td>3.4
+   </td>
+   <td>Employees can view all issues for the project. All issues raised will be displayed in the issues tab. Ongoing issues will be displayed in the open section while resolved issues are displayed in the closed section. The issues are sorted according to the date posted.
+   </td>
+   <td>Upon pressing on the issues tab, all the raised issues for the project are displayed in the respective section, sorted accordingly to date posted.
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>3.5
+   </td>
+   <td>Employees can send their <strong>assigned</strong> tasks to managers for review. The status of the task will be Pending Review after submission which will be resolved by the managers.
+   </td>
+   <td>Upon sending the task for review, the project dashboard will be updated, with the task being in the Pending Review section now.
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>3.6
+   </td>
+   <td>Employees can view the project’s details. The project’s details page displays the project’s name, description, deadline, manager, progress bar and project roadmap.
+   </td>
+   <td>All of the project details are displayed. The progress bar should show the current percentage of tasks completed. The roadmap shows a timeline of completed and current tasks.
+   </td>
+   <td>Low
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4" >Project Dashboard - Managers
+   </td>
+  </tr>
+  <tr>
+   <td>4.1
+   </td>
+   <td>Managers can view <strong>all </strong>tasks for the project. The tasks will be split in 3 different sections in this order: Open, Pending Review, and Closed. The tasks are sorted according to the deadline in each section. Tasks that are Open but overdue will be highlighted.
+   </td>
+   <td>Displays <strong>all</strong> of the tasks in the project, sorted accordingly in the project dashboard. Tasks that are Open but overdue will have their due date highlighted in red.
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>4.2
+   </td>
+   <td>Managers should be able to search for the tasks title. There will be a search bar where the title of the task can be searched. The result shows the tasks that are filtered out according to the input.
+   </td>
+   <td>Out of all the tasks, only the tasks with titles that partially or fully contain the user input are shown. The sections will be blank if no such task title is found.
+   </td>
+   <td>Low
+   </td>
+  </tr>
+  <tr>
+   <td>4.3
+   </td>
+   <td>Managers can add and remove other employees from the project. Upon entering a valid employee’s company email address, they will be added into the project. The manager can then also select and remove employees working on this project.
+   </td>
+   <td>When an employee’s access is granted or removed successfully, a success message appears. The project’s details page and the list of projects on the newly added or removed employee’s home page will be updated. Else an error message appears.
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>4.4
+   </td>
+   <td>Managers can create new tasks within a project. The task will be created upon inputting the task title, deadline, description, priority, assigned employee (select one from a list of employees currently in the project), estimated working hours and attached files. All fields are compulsory except for attached files, with a minimum of 10 words for the task description.
+   </td>
+   <td>A success message will be displayed upon successful task creation. Else, a warning will be shown to fill in all necessary inputs that are missing or invalid
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>4.5
+   </td>
+   <td>Managers can view all issues for the project. All issues raised will be displayed on a separate tab in the project dashboard. Ongoing issues will be displayed in the open section while resolved issues are displayed in the closed section. The issues are sorted according to the date posted.
+   </td>
+   <td>Upon pressing on the issues tab, all the raised issues for the project are displayed in the respective section, sorted accordingly to date posted.
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>4.6
+   </td>
+   <td>Managers can close issues for the project. There will be a prompt shown to the manager for confirmation when closing the issue.
+   </td>
+   <td>Upon successful closure of the issue, it will be removed from the Open section to the Closed section in the issues tab.
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>4.7
+   </td>
+   <td>Managers should be able to close their project. Upon pressing the close project button, a warning will be shown to confirm the closure of the project. The warning will notify the manager if there are still unfinished tasks.
+   </td>
+   <td>Upon successful closure of the project, a success message will be shown. The project will be grayed out in the employees’ and managers’ home page. Else, an error message is shown.
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>4.8
+   </td>
+   <td>Managers can close tasks that are currently open in the task tab. A message will also be sent to confirm the closure of the task.
+   </td>
+   <td>Upon successful closure of the task, the project dashboard will be updated, with the task being in the Closed section now. Otherwise, an error message is shown.
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>4.9
+   </td>
+   <td>Managers can accept or reject tasks that are pending review. A message will be sent to confirm action.
+   </td>
+   <td>Upon accepting or rejecting the task review, the project dashboard will be updated with the task being in the Closed or Open section respectively. Else, an error message is shown.
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>4.10
+   </td>
+   <td>Managers can view the project’s details. The project’s details page displays the project’s name, description, deadline, manager, progress bar and project roadmap.
+   </td>
+   <td>All of the project details are displayed. The progress bar should show the current percentage of tasks completed. The roadmap shows a timeline of completed and current tasks.
+   </td>
+   <td>Low
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4" >Task Page 
+   </td>
+  </tr>
+  <tr>
+   <td>5.1
+   </td>
+   <td>Managers and Employees can view task title, deadline, description, priority, assigned employees, estimated working hours and attached optional files.
+   </td>
+   <td>Pressing on the task in the project dashboard should bring the user to the task page and  display all the task details as listed.
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td>5.2
+   </td>
+   <td>Employees should be able to raise issues for the task. The employee will be prompted to enter a title for the issue and a description for that particular task ID. A minimum of 10 words will be required for the description.
+   </td>
+   <td>Upon successful submission of the issue, a success message will be displayed. The issue will be displayed on the issues tab in the project’s dashboard. Else, an error message is shown.
+   </td>
+   <td>High
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4" >Employee Analytics Dashboards - Managers only
+   </td>
+  </tr>
+  <tr>
+   <td>6.1
+   </td>
+   <td>Managers can search for other employees. There will be a search bar where the manager can input the employee’s name or email address to search for him/her.
+   </td>
+   <td>All employees’ names or email addresses that match the input will be displayed. Otherwise, a “no employee found” message is displayed.
+   </td>
+   <td>Medium
+   </td>
+  </tr>
+  <tr>
+   <td>6.2
+   </td>
+   <td>Managers can view employee’s total assigned projects and tasks, task completion rate, estimated working hours per week and monthly completed tasks.
+   </td>
+   <td>Upon searching and selecting the employee, all the details mentioned should be displayed.
+   </td>
+   <td>Medium
+   </td>
+  </tr>
+  <tr>
+   <td colspan="4" >Profile Page
+   </td>
+  </tr>
+  <tr>
+   <td>7.1
+   </td>
+   <td>Managers and employees will be able to view their personal details. Their name, company email, contact number, department and role will be shown.
+   </td>
+   <td>On the profile page, they should be able to see their listed personal details
+   </td>
+   <td>Medium
+   </td>
+  </tr>
+  <tr>
+   <td>7.2
+   </td>
+   <td>Managers and employees can edit these following personal details: name, department and contact number. These details will be validated, similar to authentication.
+   </td>
+   <td>Upon successful edit, a success message will be displayed. Else, show an error message for the invalid fields
+   </td>
+   <td>Low
+   </td>
+  </tr>
+</table> <br>
 
+### Non-functional
 
+<table>
+  <tr>
+   <td><strong>System Attributes</strong>
+   </td>
+   <td><strong>Attributes Description</strong>
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="2" >Performance
+   </td>
+   <td>Processing of each request should be done within 2 seconds.
+   </td>
+  </tr>
+  <tr>
+   <td>Application should load within 2 seconds given a high number of users (> 100 users).
+   </td>
+  </tr>
+  <tr>
+   <td>Reliability
+   </td>
+   <td>Processing requests must perform successfully for at least 95% of use cases.
+   </td>
+  </tr>
+  <tr>
+   <td>Usability
+   </td>
+   <td>Intuitive and interactive application with a simple design. Page elements are designed with a common theme. To minimize clutter, there should not be any redundant features, buttons, pages, etc. that are not useful for the application.
+   </td>
+  </tr>
+  <tr>
+   <td>Availability
+   </td>
+   <td>Application must be available to users at least 98% of the time of the month
+   </td>
+  </tr>
+  <tr>
+   <td rowspan="6" >Security
+   </td>
+   <td rowspan="3" >There will be validation of credentials when employees and managers are trying to log in to the application. Any invalid credentials will be denied access.
+   </td>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+   <td>Passwords are stored in Firebase Authentication that employs password hashing to secure protection and confidentiality.
+   </td>
+  </tr>
+  <tr>
+   <td>Managers have access to certain pages, in which the Employee won’t be able to access.
+   </td>
+  </tr>
+  <tr>
+   <td>Both Manager and Employee accounts must be registered with a valid company email. Manager accounts must be created with an additional secret code specified by the company to the manager, where they will be validated afterwards.
+   </td>
+  </tr>
+</table> <br>
 
+### Limitations
+1. Only one manager is in-charge of a project and given full administrative access. Similarly, only one employee is assigned to a task. In the real world, there could be some instances where there are multiple managers involved in a huge project and multiple employees working on a singular task.
+2. There could be different levels of administrative access given, besides just employees and managers. E.g. CEO, CFO, etc. which should be able to view all of the company’s projects, instead of just the ones they are involved in.
+3. Lack of departmentalization like in a real-world scenario where employees and managers are under teams. Managers can then track team members easily.
+4. There could be better metrics to track the project’s progress (E.g. task completion rate weighted by priority and difficulty) and to assess employees’ contributions (E.g. quality of task reviews rated by manager).
+5. Issues raised by employees can be further categorised based on their severity and give managers prompt reminders about urgent issues. <br><br>
 
+## User Flow
 
 
 
