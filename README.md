@@ -130,346 +130,8 @@ Plan It is meant to support multiple different industries and types of businesse
 
 ## Requirements
 ### Functional
-<table>
-  <tr>
-   <td><strong>S/N</strong>
-   </td>
-   <td><strong>Requirements Description</strong>
-   </td>
-   <td><strong>Acceptance Criteria</strong>
-   </td>
-   <td><strong>Priority</strong>
-   </td>
-  </tr>
-  <tr>
-   <td colspan="4" >Authentication
-   </td>
-  </tr>
-  <tr>
-   <td>1.1
-   </td>
-   <td>Managers and Employees must be able to register to the system by inputting a valid company email, name, contact number, password, company, department and role. The employee account is created upon successful validation of credentials. There should not be repeated usage of company email. For managers, they will additionally be prompted to enter a company’s secret code as validation.
-   </td>
-   <td>Success message must be shown upon successful registration, else show an error message for the invalid fields.
-   </td>
-   <td>High
-   </td>
-  </tr>
-  <tr>
-   <td>1.2
-   </td>
-   <td>Managers and Employees with existing accounts should be able to log in with their company email and password. 
-   </td>
-   <td>Home Page shown upon successful login, else return an error message stating invalid credentials
-   </td>
-   <td>High
-   </td>
-  </tr>
-  <tr>
-   <td>1.3
-   </td>
-   <td>Managers and Employees can reset their password by pressing the “Forget Password” button. Upon entering a valid company email, instructions to resetting the password will be sent to the email.
-   </td>
-   <td>Success message upon successful password reset, informing the user to check their email for instructions, else return an error message
-   </td>
-   <td>Medium
-   </td>
-  </tr>
-  <tr>
-   <td>1.4
-   </td>
-   <td>Managers and Employees should be able to log out of the system. There will be a logout button on the navigation bar after they are logged in.
-   </td>
-   <td>Upon pressing the logout button, the user is logged out of the system and brought to the landing page
-   </td>
-   <td>High
-   </td>
-  </tr>
-  <tr>
-   <td colspan="4" >Home Page
-   </td>
-  </tr>
-  <tr>
-   <td>2.1
-   </td>
-   <td>Managers can view <strong>all</strong> projects created by them and Employees can view projects they are <strong>working on</strong>. Ongoing projects will be displayed on the top, while completed projects are below and grayed out, sorted by their deadlines.
-   </td>
-   <td>All projects and its details (name, manager and deadlines) are listed on this page. Only projects associated with the manager or employee are shown.
-   </td>
-   <td>High
-   </td>
-  </tr>
-  <tr>
-   <td>2.2
-   </td>
-   <td>Managers can search for projects created by them and Employees can search for projects they are working on. The result shows the projects that are filtered out according to the input.
-   </td>
-   <td>Out of all projects associated with them, only those with names that partially or fully contain the input are shown. A message stating no results is shown if no such project title is found.
-   </td>
-   <td>Low
-   </td>
-  </tr>
-  <tr>
-   <td>2.3
-   </td>
-   <td>Managers can create new projects. They will be prompted to input the project’s name, description and deadline, which are all compulsory fields. Project description has to be at least 10 words.
-   </td>
-   <td>Upon creation of a new project, a success message appears and the new project is displayed. Else, an error message is shown.
-   </td>
-   <td>High
-   </td>
-  </tr>
-  <tr>
-   <td>2.4
-   </td>
-   <td>Managers can view<strong> all</strong> current tasks for their projects. Employees can view all current tasks<strong> assigned</strong> to them to be completed. These tasks are sorted by due date, from earliest to latest, and then priority.
-   </td>
-   <td>All current tasks are displayed chronologically according to the due date and priority on the right side of the home page. A scrollable list will display up to three tasks.
-   </td>
-   <td>Medium
-   </td>
-  </tr>
-  <tr>
-   <td colspan="4" >Project Dashboard - Employees
-   </td>
-  </tr>
-  <tr>
-   <td>3.1
-   </td>
-   <td>Employees can view all created tasks in the project. The tasks will be split in 3 different sections in this order: Open, Pending Review, and Closed. The tasks are sorted according to the deadline in each section. Tasks that are Open but overdue will be highlighted.
-   </td>
-   <td>Displays all of the tasks in the project, sorted accordingly in the project dashboard sections. Tasks that are Open but overdue will have their due date highlighted in red.
-   </td>
-   <td>High
-   </td>
-  </tr>
-  <tr>
-   <td>3.2
-   </td>
-   <td>Employees can filter their <strong>assigned </strong>tasks in the project.
-   </td>
-   <td>Displays all tasks in the project <strong>assigned </strong>to the employee, sorted accordingly in the project dashboard sections.
-   </td>
-   <td>High
-   </td>
-  </tr>
-  <tr>
-   <td>3.3
-   </td>
-   <td>Employees should be able to search for the task title. There will be a search bar where the title of the task can be searched. The result shows the tasks that are filtered out according to the input and current filter view (all or assigned tasks).
-   </td>
-   <td>Only those with titles that partially or fully contain the user input are shown. The sections will be blank if no such task title is found.
-   </td>
-   <td>Medium
-   </td>
-  </tr>
-  <tr>
-   <td>3.4
-   </td>
-   <td>Employees can view all issues for the project. All issues raised will be displayed in the issues tab. Ongoing issues will be displayed in the open section while resolved issues are displayed in the closed section. The issues are sorted according to the date posted.
-   </td>
-   <td>Upon pressing on the issues tab, all the raised issues for the project are displayed in the respective section, sorted accordingly to date posted.
-   </td>
-   <td>High
-   </td>
-  </tr>
-  <tr>
-   <td>3.5
-   </td>
-   <td>Employees can send their <strong>assigned</strong> tasks to managers for review. The status of the task will be Pending Review after submission which will be resolved by the managers.
-   </td>
-   <td>Upon sending the task for review, the project dashboard will be updated, with the task being in the Pending Review section now.
-   </td>
-   <td>High
-   </td>
-  </tr>
-  <tr>
-   <td>3.6
-   </td>
-   <td>Employees can view the project’s details. The project’s details page displays the project’s name, description, deadline, manager, progress bar and project roadmap.
-   </td>
-   <td>All of the project details are displayed. The progress bar should show the current percentage of tasks completed. The roadmap shows a timeline of completed and current tasks.
-   </td>
-   <td>Low
-   </td>
-  </tr>
-  <tr>
-   <td colspan="4" >Project Dashboard - Managers
-   </td>
-  </tr>
-  <tr>
-   <td>4.1
-   </td>
-   <td>Managers can view <strong>all </strong>tasks for the project. The tasks will be split in 3 different sections in this order: Open, Pending Review, and Closed. The tasks are sorted according to the deadline in each section. Tasks that are Open but overdue will be highlighted.
-   </td>
-   <td>Displays <strong>all</strong> of the tasks in the project, sorted accordingly in the project dashboard. Tasks that are Open but overdue will have their due date highlighted in red.
-   </td>
-   <td>High
-   </td>
-  </tr>
-  <tr>
-   <td>4.2
-   </td>
-   <td>Managers should be able to search for the tasks title. There will be a search bar where the title of the task can be searched. The result shows the tasks that are filtered out according to the input.
-   </td>
-   <td>Out of all the tasks, only the tasks with titles that partially or fully contain the user input are shown. The sections will be blank if no such task title is found.
-   </td>
-   <td>Low
-   </td>
-  </tr>
-  <tr>
-   <td>4.3
-   </td>
-   <td>Managers can add and remove other employees from the project. Upon entering a valid employee’s company email address, they will be added into the project. The manager can then also select and remove employees working on this project.
-   </td>
-   <td>When an employee’s access is granted or removed successfully, a success message appears. The project’s details page and the list of projects on the newly added or removed employee’s home page will be updated. Else an error message appears.
-   </td>
-   <td>High
-   </td>
-  </tr>
-  <tr>
-   <td>4.4
-   </td>
-   <td>Managers can create new tasks within a project. The task will be created upon inputting the task title, deadline, description, priority, assigned employee (select one from a list of employees currently in the project), estimated working hours and attached files. All fields are compulsory except for attached files, with a minimum of 10 words for the task description.
-   </td>
-   <td>A success message will be displayed upon successful task creation. Else, a warning will be shown to fill in all necessary inputs that are missing or invalid
-   </td>
-   <td>High
-   </td>
-  </tr>
-  <tr>
-   <td>4.5
-   </td>
-   <td>Managers can view all issues for the project. All issues raised will be displayed on a separate tab in the project dashboard. Ongoing issues will be displayed in the open section while resolved issues are displayed in the closed section. The issues are sorted according to the date posted.
-   </td>
-   <td>Upon pressing on the issues tab, all the raised issues for the project are displayed in the respective section, sorted accordingly to date posted.
-   </td>
-   <td>High
-   </td>
-  </tr>
-  <tr>
-   <td>4.6
-   </td>
-   <td>Managers can close issues for the project. There will be a prompt shown to the manager for confirmation when closing the issue.
-   </td>
-   <td>Upon successful closure of the issue, it will be removed from the Open section to the Closed section in the issues tab.
-   </td>
-   <td>High
-   </td>
-  </tr>
-  <tr>
-   <td>4.7
-   </td>
-   <td>Managers should be able to close their project. Upon pressing the close project button, a warning will be shown to confirm the closure of the project. The warning will notify the manager if there are still unfinished tasks.
-   </td>
-   <td>Upon successful closure of the project, a success message will be shown. The project will be grayed out in the employees’ and managers’ home page. Else, an error message is shown.
-   </td>
-   <td>High
-   </td>
-  </tr>
-  <tr>
-   <td>4.8
-   </td>
-   <td>Managers can close tasks that are currently open in the task tab. A message will also be sent to confirm the closure of the task.
-   </td>
-   <td>Upon successful closure of the task, the project dashboard will be updated, with the task being in the Closed section now. Otherwise, an error message is shown.
-   </td>
-   <td>High
-   </td>
-  </tr>
-  <tr>
-   <td>4.9
-   </td>
-   <td>Managers can accept or reject tasks that are pending review. A message will be sent to confirm action.
-   </td>
-   <td>Upon accepting or rejecting the task review, the project dashboard will be updated with the task being in the Closed or Open section respectively. Else, an error message is shown.
-   </td>
-   <td>High
-   </td>
-  </tr>
-  <tr>
-   <td>4.10
-   </td>
-   <td>Managers can view the project’s details. The project’s details page displays the project’s name, description, deadline, manager, progress bar and project roadmap.
-   </td>
-   <td>All of the project details are displayed. The progress bar should show the current percentage of tasks completed. The roadmap shows a timeline of completed and current tasks.
-   </td>
-   <td>Low
-   </td>
-  </tr>
-  <tr>
-   <td colspan="4" >Task Page 
-   </td>
-  </tr>
-  <tr>
-   <td>5.1
-   </td>
-   <td>Managers and Employees can view task title, deadline, description, priority, assigned employees, estimated working hours and attached optional files.
-   </td>
-   <td>Pressing on the task in the project dashboard should bring the user to the task page and  display all the task details as listed.
-   </td>
-   <td>High
-   </td>
-  </tr>
-  <tr>
-   <td>5.2
-   </td>
-   <td>Employees should be able to raise issues for the task. The employee will be prompted to enter a title for the issue and a description for that particular task ID. A minimum of 10 words will be required for the description.
-   </td>
-   <td>Upon successful submission of the issue, a success message will be displayed. The issue will be displayed on the issues tab in the project’s dashboard. Else, an error message is shown.
-   </td>
-   <td>High
-   </td>
-  </tr>
-  <tr>
-   <td colspan="4" >Employee Analytics Dashboards - Managers only
-   </td>
-  </tr>
-  <tr>
-   <td>6.1
-   </td>
-   <td>Managers can search for other employees. There will be a search bar where the manager can input the employee’s name or email address to search for him/her.
-   </td>
-   <td>All employees’ names or email addresses that match the input will be displayed. Otherwise, a “no employee found” message is displayed.
-   </td>
-   <td>Medium
-   </td>
-  </tr>
-  <tr>
-   <td>6.2
-   </td>
-   <td>Managers can view employee’s total assigned projects and tasks, task completion rate, estimated working hours per week and monthly completed tasks.
-   </td>
-   <td>Upon searching and selecting the employee, all the details mentioned should be displayed.
-   </td>
-   <td>Medium
-   </td>
-  </tr>
-  <tr>
-   <td colspan="4" >Profile Page
-   </td>
-  </tr>
-  <tr>
-   <td>7.1
-   </td>
-   <td>Managers and employees will be able to view their personal details. Their name, company email, contact number, department and role will be shown.
-   </td>
-   <td>On the profile page, they should be able to see their listed personal details
-   </td>
-   <td>Medium
-   </td>
-  </tr>
-  <tr>
-   <td>7.2
-   </td>
-   <td>Managers and employees can edit these following personal details: name, department and contact number. These details will be validated, similar to authentication.
-   </td>
-   <td>Upon successful edit, a success message will be displayed. Else, show an error message for the invalid fields
-   </td>
-   <td>Low
-   </td>
-  </tr>
-</table> <br>
+<table style="border-collapse:collapse;margin-left:6.5pt" cellspacing="0"><tbody><tr style="height:24pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s15" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">S/N</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s15" style="padding-top: 5pt;padding-left: 93pt;text-indent: 0pt;text-align: left;">Requirements Description</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s15" style="padding-top: 5pt;padding-left: 11pt;text-indent: 0pt;text-align: left;">Priority</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s15" style="padding-top: 5pt;padding-left: 12pt;padding-right: 12pt;text-indent: 0pt;text-align: center;">Done</p></td></tr><tr style="height:24pt"><td style="width:470pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4" bgcolor="#D9D9D9"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">Authentication</p></td></tr><tr style="height:107pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">1.1</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;padding-right: 6pt;text-indent: 0pt;text-align: left;">Managers and Employees must be able to register to the system by inputting a valid company email, name, contact number, password, company, department and role. The employee</p><p class="s16" style="padding-left: 5pt;padding-right: 6pt;text-indent: 0pt;text-align: left;">account is created upon successful validation of credentials. There should not be repeated usage of company email. For managers, they will additionally be prompted to enter a</p><p class="s16" style="padding-left: 5pt;text-indent: 0pt;text-align: left;">company’s secret code as validation.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 2pt;text-indent: 0pt;text-align: center;">✔</p></td></tr><tr style="height:38pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">1.2</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;padding-right: 6pt;text-indent: 0pt;text-align: left;">Managers and Employees with existing accounts should be able to log in with their correct company email and password.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 2pt;text-indent: 0pt;text-align: center;">✔</p></td></tr><tr style="height:52pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">1.3</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Managers and Employees should be able to log out of the</p><p class="s16" style="padding-left: 5pt;text-indent: 0pt;text-align: left;">system. There will be a logout button on the navigation bar after they are logged in.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 2pt;text-indent: 0pt;text-align: center;">✔</p></td></tr><tr style="height:24pt"><td style="width:470pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4" bgcolor="#D9D9D9"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">Home Page</p></td></tr><tr style="height:65pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">2.1</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;padding-right: 6pt;text-indent: 0pt;text-align: left;">Managers can view <b>all </b>projects created by them and Employees can view projects they are <b>working on</b>. Ongoing projects will be displayed on the top, while completed projects are below and grayed out, sorted by their deadlines.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 1pt;text-indent: 0pt;text-align: center;">✔</p></td></tr><tr style="height:66pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">2.2</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;padding-right: 6pt;text-indent: 0pt;text-align: left;">Managers can search for projects created by them and Employees can search for projects they are working on. The result shows the projects that are filtered out according to the input.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Low</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 2pt;text-indent: 0pt;text-align: center;">✔</p></td></tr><tr style="height:51pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">2.3</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;padding-right: 4pt;text-indent: 0pt;text-align: left;">Managers can create new projects. Upon clicking on the Create Project button, they will be prompted to input the project’s name, description and deadline, which are all compulsory fields.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 1pt;text-indent: 0pt;text-align: center;">✔</p></td></tr></tbody><tbody><tr style="height:79pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">2.4</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Managers and employees can view all upcoming tasks for their projects in the Upcoming Task section. Managers can view <b>all </b>upcoming tasks, while employees can view only their upcoming <b>assigned </b>tasks. These tasks are sorted by their deadlines and displayed chronologically, from earliest to latest.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Medium</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 1pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:24pt"><td style="width:470pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4" bgcolor="#D9D9D9"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">Project Dashboard - Employees</p></td></tr><tr style="height:93pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">3.1</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: justify;">Employees can view project name, description, working</p><p class="s16" style="padding-left: 5pt;padding-right: 6pt;text-indent: 0pt;text-align: justify;">employees and all created tasks in the project. The tasks will be split in 3 different sections in this order: Open, Pending Review, and Closed. The tasks are sorted according to the deadline in</p><p class="s16" style="padding-left: 5pt;padding-right: 22pt;text-indent: 0pt;text-align: justify;">each section. Tasks that are Open but overdue will have their deadline highlighted red.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 1pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:24pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br></p></td><td style="width:439pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="3"><p class="s15" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Task Tab</p></td></tr><tr style="height:52pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">3.2</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Employees can view task title, deadline, description, priority, assigned employees, status, estimated working hours and</p><p class="s16" style="padding-left: 5pt;text-indent: 0pt;text-align: left;">attached files after pressing on the task.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 2pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:65pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">3.3</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Employees can filter their <b>assigned </b>tasks in the project. There will be an toggleable filter icon, where toggling on this icon will only show the employee’s assigned tasks. Toggling off this icon will show all tasks in the project.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 1pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:66pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">3.4</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Employees should be able to search for the task title. There will be a search bar where the title of the task can be searched. The result shows the tasks that are filtered out according to the input and current filter view (all or assigned tasks).</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Medium</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 2pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:65pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">3.5</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;padding-right: 8pt;text-indent: 0pt;text-align: left;">Employees can send their <b>assigned </b>tasks to managers for review, by clicking on the tick icon beside the task after</p><p class="s16" style="padding-left: 5pt;text-indent: 0pt;text-align: left;">completion. The status of the task will be Pending Review after submission which will later be resolved by the managers.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 1pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:25pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br></p></td><td style="width:439pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="3"><p class="s15" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Issues Tab</p></td></tr><tr style="height:93pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">3.6</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;padding-right: 10pt;text-indent: 0pt;text-align: justify;">Employees can visit the Issues Page for the project by pressing on the Issues tab under the project views. All issues raised will be displayed in the issues tab. Ongoing issues will be displayed in the open section while resolved issues are displayed in the</p><p class="s16" style="padding-left: 5pt;padding-right: 37pt;text-indent: 0pt;text-align: justify;">closed section. The issues are sorted according to the date created.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 1pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:38pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">3.7</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Employees should be able to search for the issue title. There</p><p class="s16" style="padding-left: 5pt;text-indent: 0pt;text-align: left;">will be a search bar where the title of the issue can be searched.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Low</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 1pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr></tbody><tbody><tr style="height:37pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br></p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">The result shows the issues that are filtered out according to the input and current filter view (open or closed issues).</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br></p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br></p></td></tr><tr style="height:66pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">3.8</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Employees should be able to raise issues for the task. The</p><p class="s16" style="padding-left: 5pt;padding-right: 8pt;text-indent: 0pt;text-align: left;">employee will be prompted to select one of his assigned tasks that has an issue and fill up the title and description for his issue.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 2pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:65pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">3.9</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Employees should be able to remove any issues raised by them.</p><p class="s16" style="padding-left: 5pt;text-indent: 0pt;text-align: left;">There should be a bin icon beside each issue raised by the</p><p class="s16" style="padding-left: 5pt;text-indent: 0pt;text-align: left;">employee. Pressing on this icon removes the issue entirely from the Open section.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Medium</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 1pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:25pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br></p></td><td style="width:439pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="3"><p class="s15" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Roadmap Tab</p></td></tr><tr style="height:65pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;padding-right: 3pt;text-indent: 0pt;text-align: center;">3.10</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Employees can view the project roadmap. The project roadmap page displays the project name, description, and roadmap. The roadmap displays a timeline containing all the tasks, with each task being a bar spanning from its open date till its due date.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Low</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 1pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:24pt"><td style="width:470pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4" bgcolor="#D9D9D9"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">Project Dashboard - Managers</p></td></tr><tr style="height:93pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">4.1</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: justify;">Managers can view project name, description, working</p><p class="s16" style="padding-left: 5pt;padding-right: 6pt;text-indent: 0pt;text-align: justify;">employees and all created tasks in the project. The tasks will be split in 3 different sections in this order: Open, Pending Review, and Closed. The tasks are sorted according to the deadline in</p><p class="s16" style="padding-left: 5pt;padding-right: 22pt;text-indent: 0pt;text-align: justify;">each section. Tasks that are Open but overdue will have their deadline highlighted red.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 2pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:66pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">4.2</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;padding-right: 8pt;text-indent: 0pt;text-align: left;">Managers can add and remove other employees from the project. Upon entering a valid employee’s company email</p><p class="s16" style="padding-left: 5pt;padding-right: 6pt;text-indent: 0pt;text-align: left;">address, they will be added into the project. The manager can then also select and remove employees working on this project.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 2pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:24pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br></p></td><td style="width:439pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="3"><p class="s15" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Task Tab</p></td></tr><tr style="height:52pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">4.3</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Managers can view task title, deadline, description, priority, assigned employees, status, estimated working hours and</p><p class="s16" style="padding-left: 5pt;text-indent: 0pt;text-align: left;">attached files after pressing on the task.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 2pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:52pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">4.4</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Managers should be able to search for the tasks title. There will be a search bar where the title of the task can be searched. The result shows the tasks that are filtered out according to the input.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Low</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 1pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:65pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">4.5</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Managers can create new tasks within a project. The task will be created upon inputting the task title, deadline, description, priority, assigned employee (select one from a list of employees currently in the project), estimated working hours and attached</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 1pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr></tbody><tbody><tr style="height:37pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br></p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;padding-right: 6pt;text-indent: 0pt;text-align: left;">files. All fields are compulsory except for the task description and optional attached files.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br></p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br></p></td></tr><tr style="height:38pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">4.6</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Managers can delete tasks that are currently open in the task tab by clicking on the bin icon beside each task.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 2pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:66pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">4.7</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;padding-right: 14pt;text-indent: 0pt;text-align: justify;">Managers can accept or reject tasks that are currently pending review by clicking on the tick and cross icons beside each task in the Pending Review section. Doing so will update the status of the task to open and closed respectively.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 2pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:79pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">4.8</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;padding-right: 6pt;text-indent: 0pt;text-align: left;">Managers can edit all the task details and reopen closed tasks in the task details page. The changes will be validated similar to task creation, and the changes will be reflected after</p><p class="s16" style="padding-left: 5pt;padding-right: 6pt;text-indent: 0pt;text-align: left;">confirmation. The changes will be discarded if the cancel button is pressed.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 1pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:24pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br></p></td><td style="width:439pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="3"><p class="s15" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Issues Tab</p></td></tr><tr style="height:93pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">4.9</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;padding-right: 8pt;text-indent: 0pt;text-align: left;">Managers can visit the Issues Page for the project by pressing on the Issues tab under the project views. All issues raised will be displayed in the issues tab. Ongoing issues will be displayed in the open section while resolved issues are displayed in the</p><p class="s16" style="padding-left: 5pt;padding-right: 8pt;text-indent: 0pt;text-align: left;">closed section. The issues are sorted according to the date posted.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 1pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:65pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">4.10</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;padding-right: 8pt;text-indent: 0pt;text-align: left;">Managers should be able to search for the issue title. There will be a search bar where the title of the issue can be searched. The result shows the issues that are filtered out according to the input and current filter view (open or closed issues).</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Low</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 1pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:52pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">4.11</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;padding-right: 8pt;text-indent: 0pt;text-align: left;">Managers can resolve issues for the project by clicking on the mark as resolved button. The issue will be marked as closed, and is shifted to the closed section.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 2pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:24pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br></p></td><td style="width:439pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="3"><p class="s15" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Roadmap Tab</p></td></tr><tr style="height:66pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">4.12</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;padding-right: 14pt;text-indent: 0pt;text-align: justify;">Managers can view the project roadmap. The project roadmap page displays the project name, description, and roadmap. The roadmap displays a timeline containing all the tasks, with each task being a bar spanning from its open date till its due date.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Low</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 2pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:24pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p style="text-indent: 0pt;text-align: left;"><br></p></td><td style="width:439pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="3"><p class="s15" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Close Project Tab</p></td></tr><tr style="height:51pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">4.13</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;padding-right: 6pt;text-indent: 0pt;text-align: left;">Managers should be able to close their project. Upon pressing the close project button, a warning will be shown to confirm the closure of the project.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">High</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 1pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr></tbody><tbody><tr style="height:24pt"><td style="width:470pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4" bgcolor="#D9D9D9"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">Employee Analytics Dashboards - Managers only</p></td></tr><tr style="height:65pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">5.1</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;padding-right: 8pt;text-indent: 0pt;text-align: left;">Managers can search for other employees. All employees will be listed out on the search page. There will also be a search bar where the manager can input the employee’s name or email</p><p class="s16" style="padding-left: 5pt;text-indent: 0pt;text-align: left;">address to search for him/her.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Medium</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 1pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:79pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">5.2</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Managers can view employee’s name, email and all</p><p class="s16" style="padding-left: 5pt;text-indent: 0pt;text-align: left;">contributions made including: total projects handled, total tasks, completed task percentage, total working hours spent on tasks</p><p class="s16" style="padding-left: 5pt;text-indent: 0pt;text-align: left;">and two interactive charts on number of completed tasks for the week and number of remaining tasks for the week.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Medium</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 2pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:24pt"><td style="width:470pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt" colspan="4" bgcolor="#D9D9D9"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">Profile Page</p></td></tr><tr style="height:52pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">6.1</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;padding-right: 26pt;text-indent: 0pt;text-align: justify;">Managers and employees will be able to view their personal details. Their profile picture, name, company email, contact number, department and role will be shown.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Medium</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 2pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr><tr style="height:52pt"><td style="width:31pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 4pt;text-indent: 0pt;text-align: left;">6.2</p></td><td style="width:321pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Managers and employees can edit these following personal details: profile picture, name, contact number and department. These details will be validated, similar to authentication.</p></td><td style="width:64pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s16" style="padding-top: 5pt;padding-left: 5pt;text-indent: 0pt;text-align: left;">Low</p></td><td style="width:54pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"><p class="s17" style="padding-top: 1pt;padding-left: 17pt;text-indent: 0pt;text-align: left;">✔</p></td></tr></tbody></table>
+
 
 ### Non-functional
 
@@ -540,10 +202,111 @@ Plan It is meant to support multiple different industries and types of businesse
 5. Issues raised by employees can be further categorised based on their severity and give managers prompt reminders about urgent issues. <br><br>
 
 ## User Flow
+![image](https://github.com/jiaawe/PlanIt/assets/99934518/e0d30625-e6df-4a63-8c3e-a9462a5796c8)
+<br>
 
+## Data Diagrams
+### Logical Diagram
+![image](https://github.com/jiaawe/PlanIt/assets/99934518/97610605-7ac4-4e5c-8e33-c3bdc85daf8d)
+<br><br>
 
+### Entity Relationship Diagram
+![image](https://github.com/jiaawe/PlanIt/assets/99934518/d54351dd-4e27-4f49-b443-59194db3d4d3)
+<br>
 
+## SCRUM Execution
+### Roles and Responsibilities
+<table>
+  <tr>
+   <td><strong>Roles</strong>
+   </td>
+   <td><strong>Names</strong>
+   </td>
+   <td><strong>Responsibilities</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Product Owner + Developer
+   </td>
+   <td>Chen Jia Wei
+   </td>
+   <td>
+<ul>
 
+<li>Acts as a bridge between users and the engineering team, ensuring that user needs and requirements are effectively communicated and translated into actionable product features.
+
+<li>Manages the product backlog, ensuring that it accurately reflects user needs and priorities, and that it is regularly updated and maintained.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>Developer
+   </td>
+   <td>Calvin Septyanto
+   </td>
+   <td>
+<ul>
+
+<li>Contributes to the design and development of software that can be scaled to meet the needs of users and stakeholders.
+
+<li>Writes clean and functional code for both the front-end and back-end of software applications.
+
+<li>Conducts testing to identify and address bugs, errors, or other issues that may arise in the code.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>Developer
+   </td>
+   <td>Chong Wai Sheen
+   </td>
+   <td>
+<ul>
+
+<li>Contributes to the design and development of software that can be scaled to meet the needs of users and stakeholders.
+
+<li>Writes clean and functional code for both the front-end and back-end of software applications.
+
+<li>Conducts testing to identify and address bugs, errors, or other issues that may arise in the code.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>Developer
+   </td>
+   <td>Brandon Angga
+   </td>
+   <td>
+<ul>
+
+<li>Contributes to the design and development of software that can be scaled to meet the needs of users and stakeholders.
+
+<li>Writes clean and functional code for both the front-end and back-end of software applications.
+
+<li>Conducts testing to identify and address bugs, errors, or other issues that may arise in the code.
+</li>
+</ul>
+   </td>
+  </tr>
+  <tr>
+   <td>Scrum Master + Developer
+   </td>
+   <td>Hans Sebastian Mulyawan
+   </td>
+   <td>
+<ul>
+
+<li>Has a clear understanding of the roles and responsibilities of each team member, and works to improve the team's communication and efficiency.
+
+<li>Leads and coordinates important team meetings, including sprint planning, daily stand-up meetings, sprint reviews, and retrospectives.
+</li>
+</ul>
+   </td>
+  </tr>
+</table>
 
 
 
